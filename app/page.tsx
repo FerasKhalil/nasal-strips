@@ -53,9 +53,21 @@ const MinusIcon = ({ className = 'w-5 h-5' }) => (
 // ============================================
 // ANIMATION VARIANTS
 // ============================================
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+import { Variants } from "framer-motion";
+
+const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
 };
 
 const stagger = {
@@ -63,7 +75,7 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } }
 };
 
-const scaleIn = {
+const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
 };
@@ -319,8 +331,7 @@ border-neutral-200 rounded-full text-xs font-semibold mb-6 shadow-sm">
               <span className="text-neutral-700">47,000+ 5-Star Reviews</span>
             </motion.div>
 
-            <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight
-leading-[1.05] mb-6">
+            <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6">
               Breathe Better.
               <br />
               <span className="bg-gradient-to-r from-[#0A0F1C] via-[#00C896] to-[#0A0F1C] bg-clip-text
