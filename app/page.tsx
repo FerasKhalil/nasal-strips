@@ -1,8 +1,9 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const WHATSAPP_NUMBER = '962797348978'; // No "+", no spaces
 const buildWhatsAppLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -100,9 +101,9 @@ function WhatsButton({
 }) {
   const defaultMessage =
     productName && price
-      ? `Hi! I'd like to order:\n\n📦 ${productName}\n💰 $${price}\n\nPlease confirm availability and shipping. Thank
+      ? `Hi! I'd like to order:\n\n📦 ${productName}\n💰 ${price}JDs\n\nPlease confirm availability and shipping. Thank
 you!`
-      : `Hi! I'm interested in AEROFLOW nasal strips. Can you help me with my order?`;
+      : `Hi! I'm interested in BETTERBEATHE nasal strips. Can you help me with my order?`;
 
   const href = buildWhatsAppLink(message || defaultMessage);
 
@@ -135,7 +136,7 @@ you!`
 // ============================================
 function FloatingWhatsApp() {
   const [open, setOpen] = useState(false);
-  const href = buildWhatsAppLink("Hi! I have a question about AEROFLOW nasal strips.");
+  const href = buildWhatsAppLink("Hi! I have a question about BETTERBEATHE nasal strips.");
 
   return (
     <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-3">
@@ -155,7 +156,7 @@ cursor-pointer hover:shadow-3xl transition-shadow"
               <WhatsAppIcon className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="font-bold text-sm text-[#0A0F1C]">Chat with AEROFLOW</div>
+              <div className="font-bold text-sm text-[#0A0F1C]">Chat with BETTERBEATHE</div>
               <div className="text-xs text-neutral-600 mt-0.5">
                 Hi there! 👋 Click here to order via WhatsApp. We typically reply in minutes.
               </div>
@@ -216,7 +217,7 @@ function AnnouncementBar() {
       <div className="flex items-center justify-center gap-2 flex-wrap">
         <span className="inline-flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 bg-[#00C896] rounded-full animate-pulse" />
-          Free Shipping on Orders $35+
+          Free Delivery on Orders 35JDs+
         </span>
         <span className="opacity-50 hidden sm:inline">•</span>
         <span>60-Night Money-Back Guarantee</span>
@@ -245,7 +246,7 @@ justify-center group-hover:scale-110 transition-transform">
                 <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
               </svg>
             </div>
-            <span className="text-xl font-bold tracking-tight">AEROFLOW</span>
+            <span className="text-xl font-bold tracking-tight">BETTERBEATHE</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -353,9 +354,9 @@ lg:justify-start">
               <WhatsButton
                 variant="primary"
                 className="px-8 py-4 text-base"
-                message="Hi! I'd like to order AEROFLOW nasal strips. Please share available packs and prices."
+                message="Hi! I'd like to order BETTERBEATHE nasal strips. Please share available packs and prices."
               >
-                Order on WhatsApp — From $24
+                Order on WhatsApp — From 10JDs
               </WhatsButton>
               <a href="#how-it-works" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white
 border border-neutral-300 text-[#0A0F1C] text-base font-semibold rounded-full hover:border-[#0A0F1C] transition-all">
@@ -367,7 +368,7 @@ border border-neutral-300 text-[#0A0F1C] text-base font-semibold rounded-full ho
 gap-x-6 gap-y-3 text-sm text-neutral-600">
               <div className="flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
-                <span>Free Shipping</span>
+                <span>Free Delivery</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
@@ -559,7 +560,7 @@ function ProductShowcase() {
       price: 10,
       perStrip: 0.33,
       popular: false,
-      features: ['30 premium strips', 'Original size', 'Standard adhesive', 'Free shipping']
+      features: ['30 premium strips', 'Original size', 'Standard adhesive', 'Free Delivery']
     },
     {
       name: 'The Pro',
@@ -567,7 +568,7 @@ function ProductShowcase() {
       price: 25,
       perStrip: 0.25,
       popular: true,
-      features: ['100 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free shipping']
+      features: ['100 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free Delivery']
     },
     {
       name: 'The Bundle',
@@ -625,7 +626,7 @@ font-bold">
 
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-4xl font-bold">${product.price}</span>
+                <span className="text-4xl font-bold">{product.price}JDs</span>
                 <span className={`text-sm ${product.popular ? 'text-neutral-400' :
                   'text-neutral-500'}`}>${product.perStrip}/strip</span>
               </div>
@@ -648,7 +649,7 @@ font-bold">
               />
 
               <p className={`text-xs text-center mt-4 ${product.popular ? 'text-neutral-400' :
-                'text-neutral-500'}`}>Free shipping • 60-night guarantee</p>
+                'text-neutral-500'}`}>Free Delivery • 60-night guarantee</p>
             </div>
           ))}
         </div>
@@ -671,7 +672,7 @@ function BeforeAfterSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             The difference? <span className="text-[#00C896]">Night and day.</span>
           </h2>
-          <p className="text-lg text-neutral-400">See the measurable impact AEROFLOW has on your sleep, breathing, and
+          <p className="text-lg text-neutral-400">See the measurable impact BETTERBREATHE has on your sleep, breathing, and
             energy.</p>
         </div>
 
@@ -697,7 +698,7 @@ rounded-3xl p-8">
 
                 <div>
                   <div className="flex justify-between items-baseline mb-2">
-                    <span className="text-xs text-[#00C896] uppercase tracking-wider font-bold">After AEROFLOW</span>
+                    <span className="text-xs text-[#00C896] uppercase tracking-wider font-bold">After BETTERBREATHE</span>
                     <span className="text-2xl font-bold text-[#00C896]">
                       {item.after}
                       {item.unit}
@@ -825,7 +826,7 @@ shadow-2xl border border-neutral-200">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex-shrink-0
 flex items-center justify-center text-white font-bold text-lg">DR</div>
                 <div>
-                  <p className="text-sm text-neutral-700 italic mb-2">"AEROFLOW represents the gold standard in
+                  <p className="text-sm text-neutral-700 italic mb-2">"BETTERBREATHE represents the gold standard in
                     non-invasive respiratory support. I recommend it to my patients."</p>
                   <p className="text-sm font-bold">Dr. Rebecca Chen, MD</p>
                   <p className="text-xs text-neutral-500">Sleep Medicine, Stanford Health</p>
@@ -850,7 +851,7 @@ function ReviewsSection() {
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
     },
     {
-      name: 'Emma Rodriguez', role: 'Yoga Instructor', rating: 5, text: 'I teach 6 classes a week. AEROFLOW has completely transformed my breathing practice.Deeper inhales, longer exhales, better focus.Obsessed.', image:
+      name: 'Emma Rodriguez', role: 'Yoga Instructor', rating: 5, text: 'I teach 6 classes a week. BETTERBEATHE has completely transformed my breathing practice.Deeper inhales, longer exhales, better focus.Obsessed.', image:
         'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop'
     },
     {
@@ -858,7 +859,7 @@ function ReviewsSection() {
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop'
     },
     {
-      name: 'Olivia Patel', role: 'New Mom', rating: 5, text: 'Sleep deprivation is brutal with a newborn. AEROFLOW gives me the deepest sleep possible in those precious few hours.Lifesaver.', image:
+      name: 'Olivia Patel', role: 'New Mom', rating: 5, text: 'Sleep deprivation is brutal with a newborn. BETTERBEATHE gives me the deepest sleep possible in those precious few hours.Lifesaver.', image:
         'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop'
     },
     {
@@ -866,8 +867,21 @@ function ReviewsSection() {
         'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200&h=200&fit=crop'
     }
   ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % reviews.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [isPaused, reviews.length]);
 
+  const goToSlide = (index: number) => setActiveIndex(index);
+  const prev = () => setActiveIndex((p) => (p - 1 + reviews.length) % reviews.length);
+  const next = () => setActiveIndex((p) => (p + 1) % reviews.length);
   return (
+
     <section id="reviews" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-[#FAFAF7]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -883,34 +897,103 @@ text-xs font-semibold mb-6 shadow-sm">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             Real people. <span className="text-[#00C896]">Real results.</span>
           </h2>
-          <p className="text-lg text-neutral-600">4.9/5 average rating from customers who have made AEROFLOW part of
-            their daily routine.</p>
+          <p className="text-lg text-neutral-600">
+            4.9/5 average rating from customers who have made AEROFLOW part of their daily routine.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((review, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl border border-neutral-200">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(review.rating)].map((_, j) => (
-                  <StarIcon key={j} className="w-4 h-4 text-[#00C896]" />
-                ))}
-              </div>
-              <p className="text-neutral-700 mb-6 leading-relaxed">"{review.text}"</p>
-              <div className="flex items-center gap-3 pt-4 border-t border-neutral-100">
-                <Image src={review.image} alt={review.name} width={40} height={40} className="rounded-full
-object-cover w-10 h-10" />
-                <div className="flex-1">
-                  <div className="font-semibold text-sm">{review.name}</div>
-                  <div className="text-xs text-neutral-500">{review.role}</div>
-                </div>
-                <div className="flex items-center gap-1 px-2 py-0.5 bg-emerald-50 text-emerald-700 text-xs
+        {/* CAROUSEL */}
+        <div
+          className="relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Cards container */}
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-out"
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
+              {reviews.map((review, i) => (
+                <div
+                  key={i}
+                  className="w-full flex-shrink-0 px-2 sm:px-4"
+                >
+                  <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-neutral-200
+shadow-sm">
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(review.rating)].map((_, j) => (
+                        <StarIcon key={j} className="w-4 h-4 text-[#00C896]" />
+                      ))}
+                    </div>
+                    <p className="text-neutral-700 mb-6 leading-relaxed text-base sm:text-lg">
+                      "{review.text}"
+                    </p>
+                    <div className="flex items-center gap-3 pt-4 border-t border-neutral-100">
+                      <Image
+                        src={review.image}
+                        alt={review.name}
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover w-10 h-10"
+                      />
+                      <div className="flex-1">
+                        <div className="font-semibold text-sm">{review.name}</div>
+                        <div className="text-xs text-neutral-500">{review.role}</div>
+                      </div>
+                      <div className="flex items-center gap-1 px-2 py-0.5 bg-emerald-50 text-emerald-700 text-xs
 font-semibold rounded-full">
-                  <CheckIcon className="w-3 h-3" />
-                  Verified
+                        <CheckIcon className="w-3 h-3" />
+                        Verified
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Previous / Next Arrows */}
+          <button
+            onClick={prev}
+            aria-label="Previous review"
+            className="absolute left-0 sm:-left-2 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full
+bg-white border border-neutral-200 shadow-lg flex items-center justify-center hover:bg-neutral-50 transition-colors
+z-10"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+              strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <button
+            onClick={next}
+            aria-label="Next review"
+            className="absolute right-0 sm:-right-2 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full
+bg-white border border-neutral-200 shadow-lg flex items-center justify-center hover:bg-neutral-50 transition-colors
+z-10"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+              strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToSlide(i)}
+                aria-label={`Go to review ${i + 1}`}
+                className={`transition-all rounded-full ${activeIndex === i
+                  ? 'w-8 h-2 bg-[#00C896]'
+                  : 'w-2 h-2 bg-neutral-300 hover:bg-neutral-400'
+                  }`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-12">
@@ -927,23 +1010,24 @@ font-semibold rounded-full">
   );
 }
 
+
 function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
   const faqs = [
     {
-      q: 'Do AEROFLOW strips really work?', a: 'Yes. Our strips use medical-grade flexible spring technology trusted by 50,000+ customers. 12 clinical studies show a 38% average increase in nasal airflow within 60 seconds.We also back every order with a 60-night money- back guarantee.'
+      q: 'Do BETTERBEATHE strips really work?', a: 'Yes. Our strips use medical-grade flexible spring technology trusted by 50,000+ customers. 12 clinical studies show a 38% average increase in nasal airflow within 60 seconds.We also back every order with a 60-night money- back guarantee.'
     },
     {
       q: 'Are they comfortable to wear overnight?', a: 'Absolutely. Our strips are designed with hypoallergenic, medical - grade adhesive and ultra - flexible materials.Most customers forget they are wearing them.They stay securely in place all night without pulling or causing irritation.'
     },
     {
-      q: 'Will they help with my snoring?', a: 'In clinical studies, 73% of users reported significantly reduced snoring volume.By gently opening your nasal passages, AEROFLOW reduces the airway resistance that causes snoring.'
+      q: 'Will they help with my snoring?', a: 'In clinical studies, 73% of users reported significantly reduced snoring volume.By gently opening your nasal passages, BETTERBEATHE reduces the airway resistance that causes snoring.'
     },
     {
-      q: 'How is this different from drugstore brands?', a: 'AEROFLOW uses a stronger spring band (our patented FlexLift technology) that provides 38 % more lift than leading competitors.Our adhesive is medical - grade and hypoallergenic, designed to stay on through sweat and movement.'
+      q: 'How is this different from drugstore brands?', a: 'BETTERBEATHE uses a stronger spring band (our patented FlexLift technology) that provides 38 % more lift than leading competitors.Our adhesive is medical - grade and hypoallergenic, designed to stay on through sweat and movement.'
     },
     {
-      q: 'Can I use them during exercise?', a: 'Yes. Our Pro-grade adhesive is specifically designed to stay on during intense physical activity.Olympic athletes, marathon runners, and CrossFit competitors all use AEROFLOW.'
+      q: 'Can I use them during exercise?', a: 'Yes. Our Pro-grade adhesive is specifically designed to stay on during intense physical activity.Olympic athletes, marathon runners, and CrossFit competitors all use BETTERBEATHE.'
     },
     {
       q: 'What if they do not work for me?', a: 'We offer a 60-night money-back guarantee. If you are not completely satisfied, contact our support team within 60 days for a full refund — no questions asked.'
@@ -988,7 +1072,7 @@ items-center justify-between text-left hover:bg-neutral-50 transition-colors">
 
         <div className="mt-12 text-center p-6 bg-neutral-50 rounded-2xl">
           <p className="text-sm text-neutral-700 mb-4">Still have questions? Chat with us directly.</p>
-          <WhatsButton variant="primary" className="px-6 py-3 text-sm" message="Hi! I have a question about AEROFLOW
+          <WhatsButton variant="primary" className="px-6 py-3 text-sm" message="Hi! I have a question about BETTERBEATHE
 nasal strips.">
             Ask Us on WhatsApp
           </WhatsButton>
@@ -1012,7 +1096,7 @@ sm:p-12 lg:p-16 text-white overflow-hidden">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur border
 border-white/20 rounded-full text-xs font-semibold mb-6">
                 <span className="w-1.5 h-1.5 bg-[#00C896] rounded-full animate-pulse" />
-                The AEROFLOW Membership
+                The BETTERBEATHE Membership
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                 Breathe better, <span className="text-[#00C896]">forever.</span>
@@ -1033,7 +1117,7 @@ border-white/20 rounded-full text-xs font-semibold mb-6">
               <WhatsButton
                 variant="primary"
                 className="px-8 py-4 text-base"
-                message="Hi! I'd like to start the AEROFLOW Membership subscription. Please share the details."
+                message="Hi! I'd like to start the BETTERBEATHE Membership subscription. Please share the details."
               >
                 Start Your Membership
               </WhatsButton>
@@ -1043,14 +1127,14 @@ border-white/20 rounded-full text-xs font-semibold mb-6">
               <div className="text-center mb-6">
                 <div className="text-sm text-neutral-400 uppercase tracking-wider mb-2">The Pro Subscription</div>
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-6xl font-bold">$31</span>
+                  <span className="text-6xl font-bold">31JDs</span>
                   <span className="text-neutral-400">/month</span>
                 </div>
-                <div className="text-sm text-[#00C896] font-semibold mt-1">Save $8 vs one-time purchase</div>
+                <div className="text-sm text-[#00C896] font-semibold mt-1">Save 8JDs vs one-time purchase</div>
               </div>
 
               <div className="space-y-3 mb-6">
-                {['30 premium strips delivered monthly', 'Free express shipping', 'Flexible delivery schedule',
+                {['120 premium strips delivered monthly', 'Free express shipping', 'Flexible delivery schedule',
                   'Cancel anytime', 'Member-only perks'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-neutral-200">
                       <CheckIcon className="w-4 h-4 text-[#00C896] flex-shrink-0" />
@@ -1097,13 +1181,13 @@ text-transparent">tonight.</span>
         </h2>
 
         <p className="text-xl text-neutral-600 mb-10 max-w-2xl mx-auto">Join 50,000+ people breathing better, sleeping
-          deeper, and performing stronger. Try AEROFLOW completely risk-free for 60 nights.</p>
+          deeper, and performing stronger. Try BETTERBEATHE completely risk-free for 60 nights.</p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8">
           <WhatsButton
             variant="primary"
             className="px-10 py-5 text-lg"
-            message="Hi! I'd like to claim the 20% discount on my first AEROFLOW order. Please help me place it!"
+            message="Hi! I'd like to claim the 20% discount on my first BETTERBEATHE order. Please help me place it!"
           >
             Claim Your 20% Discount
           </WhatsButton>
@@ -1112,7 +1196,7 @@ text-transparent">tonight.</span>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-neutral-600">
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
-            <span>Free Shipping $35+</span>
+            <span>Free Delivery 35JDs+</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
@@ -1152,8 +1236,7 @@ function Footer() {
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="Enter your email" className="flex-1 px-5 py-4 bg-white/5 border
 border-white/10 rounded-full text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#00C896]" />
-              <button className="px-6 py-4 bg-[#00C896] text-[#0A0F1C] font-bold rounded-full hover:bg-[#00e0a8]
-whitespace-nowrap">Subscribe</button>
+              <button className="px-6 py-4 bg-[#00C896] text-[#0A0F1C] font-bold rounded-full hover:bg-[#00e0a8] whitespace-nowrap cursor-pointer">Subscribe</button>
             </form>
           </div>
         </div>
@@ -1167,7 +1250,7 @@ justify-center">
                   <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
                 </svg>
               </div>
-              <span className="text-xl font-bold">AEROFLOW</span>
+              <span className="text-xl font-bold">BETTERBEATHE</span>
             </a>
             <p className="text-neutral-400 text-sm mb-6 max-w-xs">Science-backed nasal strips for better breathing,
               deeper sleep, and stronger performance.</p>
@@ -1182,7 +1265,7 @@ items-center justify-center" aria-label={social}>
 
             <div className="mt-6">
               <WhatsButton variant="primary" className="px-4 py-2 text-sm" message="Hi! I'd like to know more about
-AEROFLOW nasal strips.">
+BETTERBEATHE nasal strips.">
                 Chat with Us
               </WhatsButton>
             </div>
@@ -1206,7 +1289,7 @@ AEROFLOW nasal strips.">
 
         <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between
 gap-4">
-          <p className="text-sm text-neutral-500">© 2024 AEROFLOW Inc. All rights reserved.</p>
+          <p className="text-sm text-neutral-500">© 2024 BETTERBEATHE Inc. All rights reserved.</p>
           <div className="flex items-center gap-6 text-sm text-neutral-500">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>
