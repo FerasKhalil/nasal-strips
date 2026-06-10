@@ -1194,7 +1194,7 @@ text-transparent">tonight.</span>
             className="px-10 py-5 text-lg"
             message="Hi! I'd like to claim the 20% discount on my first BREATHEBETTER order. Please help me place it!"
           >
-            Claim Your 20% Discount
+            Claim Your 10% Discount
           </WhatsButton>
         </div>
 
@@ -1235,7 +1235,7 @@ function Footer() {
         <div className="pb-12 mb-12 border-b border-neutral-800">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">Get 15% off your first order</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">Get 10% off your first order</h3>
               <p className="text-neutral-400">Plus, sleep tips, early access, and member-only deals.</p>
             </div>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
