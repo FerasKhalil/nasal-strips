@@ -246,7 +246,7 @@ justify-center group-hover:scale-110 transition-transform">
                 <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
               </svg>
             </div>
-            <span className="text-xl font-bold tracking-tight">BETTERBEATHE</span>
+            <span className="text-xl font-bold tracking-tight">BetterBreathe</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
