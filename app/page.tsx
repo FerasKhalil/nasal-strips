@@ -192,13 +192,13 @@ export default function HomePage() {
       <AnnouncementBar />
       <Navigation />
       <HeroSection />
-      <SocialProofBar />
+      {/* <SocialProofBar /> */}
       <ProductShowcase />
       <BenefitsSection />
       <BeforeAfterSection />
       <HowItWorksSection />
       <ScienceSection />
-      <ReviewsSection />
+      {/* <ReviewsSection /> */}
       <FAQSection />
       <SubscriptionSection />
       <FinalCTASection />
@@ -369,10 +369,7 @@ gap-x-6 gap-y-3 text-sm text-neutral-600">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
                 <span>Express Delivery</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckIcon className="w-4 h-4 text-[#00C896]" />
-                <span>60-Night Trial</span>
-              </div>
+
               <div className="flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
                 <span>FDA-Cleared</span>
