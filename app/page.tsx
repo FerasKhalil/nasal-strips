@@ -217,7 +217,7 @@ function AnnouncementBar() {
       <div className="flex items-center justify-center gap-2 flex-wrap">
         <span className="inline-flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 bg-[#00C896] rounded-full animate-pulse" />
-          Free Delivery on Orders 35JDs+
+          Free Delivery on Orders 25JDs+
         </span>
         <span className="opacity-50 hidden sm:inline">•</span>
         <span>60-Night Money-Back Guarantee</span>
@@ -368,7 +368,7 @@ border border-neutral-300 text-[#0A0F1C] text-base font-semibold rounded-full ho
 gap-x-6 gap-y-3 text-sm text-neutral-600">
               <div className="flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
-                <span>Free Delivery</span>
+                <span>Express Delivery</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-[#00C896]" />
@@ -389,8 +389,8 @@ rounded-full blur-2xl" />
               <div className="relative h-full w-full rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-100
 to-neutral-200 shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop"
-                  alt="Athlete breathing deeply"
+                  src="https://tse3.mm.bing.net/th/id/OIP.n-7njRMDODasYVsErNJGHQHaIc?pid=Api&h=1200&P=0"
+                  alt="Nasal Strips"
                   fill
                   priority
                   unoptimized
@@ -494,14 +494,14 @@ function BenefitsSection() {
       description: 'Instantly opens nasal passages by 38% for deeper, easier breaths.',
       metric: '+38%',
       metricLabel: 'Airflow',
-      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=600&fit=crop'
+      image: 'https://www.zoopy.com/wp-content/uploads/2024/05/best-nasal-dilators-for-breathing.jpg'
     },
     {
       title: 'Reduced Snoring',
       description: 'Up to 73% less snoring. Your partner will thank you.',
       metric: '-73%',
       metricLabel: 'Snoring',
-      image: 'https://images.unsplash.com/photo-1520206183501-b80df61043c2?w=600&h=600&fit=crop'
+      image: 'https://www.verywellhealth.com/thmb/giFQxzOHp6lmsbcQa4UD2ehYTlo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/140193856-edit-56a884e23df78cf7729e841e.jpg'
     },
     {
       title: 'Athletic Performance',
@@ -561,7 +561,7 @@ function ProductShowcase() {
       price: 10,
       perStrip: 0.33,
       popular: false,
-      features: ['30 premium strips', 'Original size', 'Standard adhesive', 'Free Delivery']
+      features: ['30 premium strips', 'Standard size', 'Standard adhesive', 'Express Delivery']
     },
     {
       name: 'The Pro',
@@ -569,7 +569,7 @@ function ProductShowcase() {
       price: 25,
       perStrip: 0.25,
       popular: true,
-      features: ['100 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free Delivery']
+      features: ['100 premium strips', 'Pro-grade adhesive', 'Express Delivery']
     },
     {
       name: 'The Bundle',
@@ -577,7 +577,7 @@ function ProductShowcase() {
       price: 15,
       perStrip: 0.3,
       popular: false,
-      features: ['50 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free express shipping']
+      features: ['50 premium strips', 'Pro-grade adhesive', 'Express Delivery']
     }
   ];
 
@@ -655,7 +655,7 @@ transform -rotate-12" />
               />
 
               <p className={`text-xs text-center mt-4 ${product.popular ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                Free Delivery • 60-night guarantee
+                Express Delivery • 60-night guarantee
               </p>
             </div>
           ))}
@@ -1038,7 +1038,7 @@ function FAQSection() {
       q: 'What if they do not work for me?', a: 'We offer a 60-night money-back guarantee. If you are not completely satisfied, contact our support team within 60 days for a full refund — no questions asked.'
     },
     {
-      q: 'How long does shipping take?', a: 'All US orders ship free and arrive within 2-5 business days. Express shipping(1 - 2 days) is available at checkout.International shipping to 47 countries.'
+      q: 'How long does shipping take?', a: 'All Jordanina orders ship and arrive within 1-3 business days. Express shipping(1 - 2 days) is available at checkout.International shipping to 47 countries.'
     },
     {
       q: 'How do subscriptions work?', a: 'Subscribe and save 20% on every order. Choose your delivery frequency (every 30, 60, or 90 days).Pause, skip, or cancel anytime from your account dashboard — no commitments, no fees.'
@@ -1107,10 +1107,10 @@ border-white/20 rounded-full text-xs font-semibold mb-6">
                 Breathe better, <span className="text-[#00C896]">forever.</span>
               </h2>
               <p className="text-lg text-neutral-300 mb-8">Join 15,000+ members who never have to think about
-                restocking. Save 20% on every order, get free express shipping, and unlock member-only perks.</p>
+                restocking. Save 20% on every order, get free express shipping for orders above 25JDs, and unlock member-only perks.</p>
 
               <ul className="space-y-4 mb-8">
-                {['Save 20% on every delivery, automatically', 'Free express shipping on all orders', 'Skip, pause, or cancel anytime — no fees', 'Member-only early access to new products', 'Priority customer support, 24/7'].map((text,
+                {['Save 20% on every delivery, automatically', 'Express shipping on all orders', 'Skip, pause, or cancel anytime — no fees', 'Member-only early access to new products', 'Priority customer support, 24/7'].map((text,
                   i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckIcon className="w-5 h-5 text-[#00C896] flex-shrink-0" />
@@ -1139,7 +1139,7 @@ border-white/20 rounded-full text-xs font-semibold mb-6">
               </div>
 
               <div className="space-y-3 mb-6">
-                {['130 premium strips delivered monthly', 'Free express shipping', 'Flexible delivery schedule',
+                {['130 premium strips delivered monthly', 'Express shipping', 'Flexible delivery schedule',
                   'Cancel anytime', 'Member-only perks'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-neutral-200">
                       <CheckIcon className="w-4 h-4 text-[#00C896] flex-shrink-0" />
@@ -1201,7 +1201,7 @@ text-transparent">tonight.</span>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-neutral-600">
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
-            <span>Free Delivery 35JDs+</span>
+            <span>Free Delivery 25JDs+</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
