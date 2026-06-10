@@ -193,8 +193,8 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <SocialProofBar />
-      <BenefitsSection />
       <ProductShowcase />
+      <BenefitsSection />
       <BeforeAfterSection />
       <HowItWorksSection />
       <ScienceSection />
@@ -394,6 +394,7 @@ to-neutral-200 shadow-2xl">
                   fill
                   priority
                   unoptimized
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1C]/40 via-transparent to-transparent" />
@@ -532,7 +533,7 @@ text-xs font-semibold mb-6 shadow-sm">
             <div key={i} className="group relative bg-white rounded-3xl overflow-hidden border border-neutral-200
 hover:shadow-2xl transition-all">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image src={benefit.image} alt={benefit.title} fill className="object-cover group-hover:scale-110
+                <Image src={benefit.image} alt={benefit.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover group-hover:scale-110
 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 text-white">
@@ -1140,7 +1141,7 @@ border-white/20 rounded-full text-xs font-semibold mb-6">
               </div>
 
               <div className="space-y-3 mb-6">
-                {['120 premium strips delivered monthly', 'Free express shipping', 'Flexible delivery schedule',
+                {['130 premium strips delivered monthly', 'Free express shipping', 'Flexible delivery schedule',
                   'Cancel anytime', 'Member-only perks'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-neutral-200">
                       <CheckIcon className="w-4 h-4 text-[#00C896] flex-shrink-0" />
