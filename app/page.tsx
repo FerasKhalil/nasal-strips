@@ -499,7 +499,7 @@ function BenefitsSection() {
       description: 'Up to 73% less snoring. Your partner will thank you.',
       metric: '-73%',
       metricLabel: 'Snoring',
-      image: 'https://images.unsplash.com/photo-1581579438747-104c53e7e84d?w=600&h=600&fit=crop'
+      image: 'https://images.unsplash.com/photo-1520206183501-b80df61043c2?w=600&h=600&fit=crop'
     },
     {
       title: 'Athletic Performance',
@@ -555,27 +555,27 @@ function ProductShowcase() {
   const products = [
     {
       name: 'The Starter',
-      strips: 10,
-      price: 24,
-      perStrip: 2.4,
+      strips: 30,
+      price: 10,
+      perStrip: 0.33,
       popular: false,
-      features: ['10 premium strips', 'Original size', 'Standard adhesive', 'Free shipping']
+      features: ['30 premium strips', 'Original size', 'Standard adhesive', 'Free shipping']
     },
     {
       name: 'The Pro',
-      strips: 30,
-      price: 39,
-      perStrip: 1.3,
+      strips: 100,
+      price: 25,
+      perStrip: 0.25,
       popular: true,
-      features: ['30 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free shipping', 'Sleep guide eBook']
+      features: ['100 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free shipping']
     },
     {
       name: 'The Bundle',
-      strips: 90,
-      price: 89,
-      perStrip: 0.99,
+      strips: 50,
+      price: 15,
+      perStrip: 0.3,
       popular: false,
-      features: ['90 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free express shipping', 'Sleep guide eBook']
+      features: ['50 premium strips', 'All sizes included', 'Pro-grade adhesive', 'Free express shipping']
     }
   ];
 
