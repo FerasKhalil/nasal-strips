@@ -905,7 +905,7 @@ text-xs font-semibold mb-6 shadow-sm">
             Real people. <span className="text-[#00C896]">Real results.</span>
           </h2>
           <p className="text-lg text-neutral-600">
-            4.9/5 average rating from customers who have made AEROFLOW part of their daily routine.
+            4.9/5 average rating from customers who have made BREATHEBETTER part of their daily routine.
           </p>
         </div>
 
@@ -1005,7 +1005,7 @@ z-10"
           <WhatsButton
             variant="primary"
             className="px-8 py-4 text-base"
-            message="Hi! I've seen the great reviews. I'd like to try AEROFLOW. Can you help me place an order?"
+            message="Hi! I've seen the great reviews. I'd like to try BREATHEBETTER. Can you help me place an order?"
           >
             Join 50,000+ Happy Customers
           </WhatsButton>
