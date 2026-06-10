@@ -618,17 +618,22 @@ relative overflow-hidden">
                   <div className="w-32 h-12 bg-gradient-to-r from-[#00C896] to-emerald-600 rounded-md shadow-lg
 transform -rotate-12" />
                 </div>
-                <div className="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur rounded-full text-xs
-font-bold">
+
+                {/* ✅ FIXED BADGE — conditional colors based on product.popular */}
+                <div className={`absolute top-4 right-4 px-3 py-1 backdrop-blur rounded-full text-xs font-bold ${product.popular
+                  ? 'bg-[#00C896] text-[#0A0F1C]'
+                  : 'bg-white/80 text-[#0A0F1C]'
+                  }`}>
                   {product.strips} strips
                 </div>
               </div>
 
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-4xl font-bold">{product.price}JDs</span>
-                <span className={`text-sm ${product.popular ? 'text-neutral-400' :
-                  'text-neutral-500'}`}>${product.perStrip}/strip</span>
+                <span className="text-4xl font-bold">{product.price} JDs</span>
+                <span className={`text-sm ${product.popular ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                  {product.perStrip} JDs/strip
+                </span>
               </div>
               {product.popular && <p className="text-sm text-[#00C896] mb-4 font-semibold">Best value per strip</p>}
 
@@ -648,8 +653,9 @@ font-bold">
                 className="w-full py-4"
               />
 
-              <p className={`text-xs text-center mt-4 ${product.popular ? 'text-neutral-400' :
-                'text-neutral-500'}`}>Free Delivery • 60-night guarantee</p>
+              <p className={`text-xs text-center mt-4 ${product.popular ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                Free Delivery • 60-night guarantee
+              </p>
             </div>
           ))}
         </div>
