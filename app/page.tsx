@@ -220,9 +220,8 @@ function AnnouncementBar() {
           Free Delivery on Orders 25JDs+
         </span>
         <span className="opacity-50 hidden sm:inline">•</span>
-        <span>60-Night Money-Back Guarantee</span>
         <span className="opacity-50 hidden sm:inline">•</span>
-        <span className="text-[#00C896] font-semibold">Use CODE BREATHE20 for 20% Off</span>
+        <span className="text-[#00C896] font-semibold">Use CODE BREATHE20 for 10% Off</span>
       </div>
     </div>
   );
@@ -653,10 +652,6 @@ transform -rotate-12" />
                 variant={product.popular ? 'primary' : 'dark'}
                 className="w-full py-4"
               />
-
-              <p className={`text-xs text-center mt-4 ${product.popular ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                Express Delivery • 60-night guarantee
-              </p>
             </div>
           ))}
         </div>
@@ -1020,7 +1015,7 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
   const faqs = [
     {
-      q: 'Do BREATHEBETTER strips really work?', a: 'Yes. Our strips use medical-grade flexible spring technology trusted by 50,000+ customers. 12 clinical studies show a 38% average increase in nasal airflow within 60 seconds.We also back every order with a 60-night money- back guarantee.'
+      q: 'Do BREATHEBETTER strips really work?', a: 'Yes. Our strips use medical-grade flexible spring technology trusted by 50,000+ customers. 12 clinical studies show a 38% average increase in nasal airflow within 60 seconds.'
     },
     {
       q: 'Are they comfortable to wear overnight?', a: 'Absolutely. Our strips are designed with hypoallergenic, medical - grade adhesive and ultra - flexible materials.Most customers forget they are wearing them.They stay securely in place all night without pulling or causing irritation.'
@@ -1035,7 +1030,7 @@ function FAQSection() {
       q: 'Can I use them during exercise?', a: 'Yes. Our Pro-grade adhesive is specifically designed to stay on during intense physical activity.Olympic athletes, marathon runners, and CrossFit competitors all use BREATHEBETTER.'
     },
     {
-      q: 'What if they do not work for me?', a: 'We offer a 60-night money-back guarantee. If you are not completely satisfied, contact our support team within 60 days for a full refund — no questions asked.'
+      q: 'What if they do not work for me?', a: '. If you are not completely satisfied, contact our support team within 60 days for a full refund — no questions asked.'
     },
     {
       q: 'How long does shipping take?', a: 'All Jordanina orders ship and arrive within 1-3 business days. Express shipping(1 - 2 days) is available at checkout.International shipping to 47 countries.'
@@ -1202,10 +1197,6 @@ text-transparent">tonight.</span>
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
             <span>Free Delivery 25JDs+</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckIcon className="w-4 h-4 text-[#00C896]" />
-            <span>60-Night Money-Back Guarantee</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckIcon className="w-4 h-4 text-[#00C896]" />
